@@ -1,8 +1,8 @@
 use strict;
 use warnings;
-use Test::More tests => 2;
+use Test::More tests => 1;
+use Test::Exception;
 
-use Catalyst::Test ();
-Catalyst::Test->import('Foo');
+eval q{ use Foo; };
+unlike $@, qr/Unknown error/;
 
-ok( request('/')->is_success, 'Request should succeed' );
