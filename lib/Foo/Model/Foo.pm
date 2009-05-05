@@ -5,7 +5,9 @@ use base 'Catalyst::Model::DBIC::Schema';
 
 __PACKAGE__->config(
     schema_class => 'Foo::Schema',
-    
+    connect_info => {
+        dsr => 'dbi:Doesntexist:dbname=foo',
+    },
 );
 
 =head1 NAME

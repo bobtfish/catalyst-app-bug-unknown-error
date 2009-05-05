@@ -7,8 +7,6 @@ all_from 'lib/Foo.pm';
 
 requires 'Catalyst::Model::DBIC::Schema';
 requires 'Catalyst::Runtime' => '5.80002';
-requires 'Catalyst::Plugin::ConfigLoader';
-requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
 requires 'parent';
 requires 'Config::General'; # This should reflect the config file format you've chosen
